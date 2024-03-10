@@ -17,3 +17,12 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: fit-content;
 }
+
+#noResult p {
+    
+    display: inline-block;
+    background-color: red;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 12px;
+}
