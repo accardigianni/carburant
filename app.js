@@ -17,7 +17,8 @@ async function printResult() {
     try {
         const data = await apiCall();
         data.forEach(value => {
-            //console.log(value);
+            //intégrer le nom de toute les champs pour des recherches
+            console.log(value);
             if (essType1 && value.sp98_prix !== null) {
                 let message = `Le prix du SP98 pour ${value.ville} est ${value.sp98_prix}`;
                 let paragraph = document.createElement('p');
@@ -34,20 +35,15 @@ async function printResult() {
         });
         if (temp && !essType1 && !essType2) {
             temp = false;
-            console.log(temp + 'boucle if');
+            // console.log(temp + 'boucle if');
             let message = "Sélectionner un carburant";
             let paragraph = document.createElement('p');
             paragraph.textContent = message;
             noResultDiv.appendChild(paragraph);
-
         };
-
     } catch (error) {
         console.error(`Une erreur s'est produite :`, error);
     };
-
-
-    console.log(temp + 'sortie');
 }
 document.getElementById('submitButton').addEventListener("click", function () {
     printResult();

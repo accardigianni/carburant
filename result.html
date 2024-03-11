@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Document</title>
+    <title>simulation json et formulaire</title>
 
 </head>
 
@@ -17,9 +17,29 @@
     <div id="Selection">
         <input type="checkbox" id="SP98">
         <label for="fuelType">SP98</label>
-        <input type="checkbox" id="SP95" >
+        <input type="checkbox" id="SP95">
         <label for="fuelType">SP95</label>
         <button id="submitButton">Valider</button>
+    </div>
+    <div id="center-form">
+        <form action="POST">
+            <h4>Inscription</h4>
+            <hr>
+            <div class="formulaire">
+                <div>
+                    <label>Nom</label>
+                    <input type="text">
+                    <label>Prénom</label>
+                    <input type="text">
+                </div>
+            </div>
+            <label>Email</label>
+            <input type="email">
+            <label>Mot de passe</label>
+            <input type="password">
+            <input type="submit" value="S'inscrire">
+            <p>Vous avez déjà un compte ?<a href="#">Se connecter</a></p>
+        </form>
     </div>
 
     <div id="results"></div>
